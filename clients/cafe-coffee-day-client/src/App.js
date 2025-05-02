@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import coffeeImage from "./assets/cafe.png"; // Adjust path if needed
-import cupImage from "./assets/coffee.png"; // Adjust path if needed
+import coffeeImage from "./assets/cafe.png"; 
+import cupImage from "./assets/coffee.png";
 
 const App = () => {
   const [menu, setMenu] = useState({});
@@ -12,7 +12,7 @@ const App = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/menu").then((res) => {
+    axios.get("https://cafe-coffee-day-4.onrender.com/menu").then((res) => {
       setMenu(res.data);
     });
   }, []);
@@ -29,7 +29,7 @@ const App = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:5000/order", {
+      const response = await axios.post("https://cafe-coffee-day-4.onrender.com/order", {
         phone,
         order,
       });
