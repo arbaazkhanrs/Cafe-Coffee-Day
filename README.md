@@ -36,5 +36,3 @@ Built with a Flask backend and a React frontend, the app demonstrates seamless c
 
 ---
 
-## 📁 Project Structure
-
